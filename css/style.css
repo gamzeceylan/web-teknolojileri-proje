@@ -1,0 +1,107 @@
+.yazi {
+	font-family: 'Pacifico', cursive;
+	color: white !important;
+}
+.resimSlider {
+	height: 650px;
+
+}
+.stilim {
+
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+.ayrac {
+	border: 2px solid #343a34
+}
+
+.bolum1 {
+	background-image: url(color9.png);
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 300px;
+}
+.bolum1 .display-1 {
+	font-family: 'Shadows Into Light', cursive;
+	color: white;
+}
+.bolum1 .display-4 {
+	font-family: 'Cabin', sans-serif;
+	font-family: 'Anton', sans-serif;
+	font-family: 'Patua One', cursive;
+	font-family: 'Archivo Black', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'Arimo', sans-serif;
+	color: white;
+}
+.sehrimResim{
+	width: 500px;
+	height: 250px;
+}
+.eskiamblem{
+	width: 30%;
+	height: 30%;
+}
+.yeniamblem{
+	width: 20%;
+	height: 20%;
+}
+.sol{
+	float:left; margin:0 0 10px 10px;
+}
+.ul{
+		list-style: square;
+}
+.span{
+	font-weight: bold;
+}
+.figure:hover{
+	opacity: 0.8;
+}
+.sakaryaSimgeler{
+	width: 900px;
+	height: 400px;
+	border: 1px solid black;
+}
+.tablo{
+	margin: auto;
+	border:5px solid rgb(70, 67, 67);
+	height: 700px;
+	width: 70%;
+}
+table,tbody,tr,td{
+	padding:17px;
+}
+.loginpanel{
+	width: 45%;
+	height: 250px;
+}
+.loginbuton{
+	width: 30%;
+	margin: auto;
+	border: 1px solid black;
+}
+.girisalanlari{
+	border: 1px solid black;
+}
+.iletisimpanel{
+	width: 50%;
+}
+.iletisimbuton{
+	width: 120px;
+	border: 1px solid black;
+}
+.hakkimdaslider{
+	max-width: 700px;
+	margin: auto;
+	margin-top: 10px;
+}
+.hakkimdaimg{
+	height: 500px;
+
+}
