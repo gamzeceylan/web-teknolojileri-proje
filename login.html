@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <title>Gamze Ceylan</title>
+
 </head>
 
 <body>
@@ -50,74 +51,84 @@
 
     <!--Üst fotoğraf kısmı başlangıç-->
     <div>
-        <div class="carousel-inner">
+        <div class="carousel-inner resimSlider">
             <div class="carousel-item active">
-                <img src="img/2.jpg" class="d-block w-100 resimSlider" alt="...">
+                <img src="img/2.jpg" class="d-block w-100 ">
             </div>
 
         </div>
     </div>
-    <!--Üst  fotoğraf kısmı bitiş-->
+    <!--Üst fotoğraf kısmı bitiş-->
 
-
-    <!--Özgeçmiş başlangıç-->
-    <section class="p-5">
+    <br><br>
+    <!--Kullanıcı Giriş kısmı başlangıç-->
+    <section>
         <div class="container">
-            <table class="tablo">
+            <h3 align="center">Kullanıcı Girişi</h3>
+            <hr class="ayrac">
 
-                <tbody>
-                    <tr>
-                        <td><b>Adres : </b></td>
-                        <td>Serdivan/Sakarya</td>
-                    </tr>
-                    <tr>
-                        <td><b>Web Sitesi : </b></td>
-                        <td>gamzeceylan.com</td>
-                    </tr>
-                    <tr>
-                        <td><b>E-mail : </b></td>
-                        <td>cceylan.5445@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td><b>Eğitim Durumu : </b></td>
-                        <td><b>Üniversite : </b>
-                            Sakarya Üniversitesi Bilgisayar Mühendisliği (2019-2022)
-                            <br><b>Lise : </b>Mithatpaşa Anadolu Lisesi (2014-2018)
-                            <br><b>Ortaokul : </b>Zübeyde Hanım Ortaokulu(2012-2014)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b>Yabancı Diller : </b></td>
-                        <td>Türkçe (Anadil)
-                            <br>İngilice (Orta düzey)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b>Yetkinlikler</b></td>
-                        <td>C# (İleri düzey)
-                            <br>HTLML5, CSS3 (İleri düzey)
-                            <br>JavaScript (Orta düzey)
-                            <br>Asp.net (Orta düzey)
-                            <br>Bootstrap kütüphanesine hakim
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b>İlgi Alanları : </b></td>
-                        <td>Web geliştirme
-                            <br>Yazılım geliştirme
-                            <br>Android Programlama
-                        </td>
-                    </tr>
+            <div class="container loginpanel">
+                <form class="container" action="kullanici.php" method="POST" id="form" novalidate="" name="form"
+                    onsubmit="return kontrol()">
+                    <div class="form-group">
+                        <br>
+                        <span>E-mail :</span>
+                        <div class="col-md-15">
+                            <input id="kullaniciemail" class="form-control girisalanlari" type="email"
+                                name="kullaniciemail">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span>Şifre : </span>
+                        <div class="col-md-15">
+                            <input id="sifre" class="form-control girisalanlari" type="password" name="sifre">
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <button class="btn btn btn-secondary loginbuton" onclick="return kkontrol()"
+                            type="submit">Giriş</button>
+                    </div>
+                    <script>
+                        function kkontrol() {
 
-                </tbody>
+                            var kullaniciemail = document.getElementById("kullaniciemail").value;
+                            var sifre = document.getElementById("sifre").value;
+                            var atpos = kullaniciemail.indexOf("@");
+                            var dotpos = kullaniciemail.lastIndexOf(".");
 
-            </table>
-        </div>
+                            if (kullaniciemail == "" || sifre == "") {
+                                alert("E-mail ve şifre alanları boş geçilemez !")
+                                return false;
+                            }
+                            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= kullaniciemail.length) {
+                                alert("Geçerli email adresi girin !!");
+                                return false;
+                            }
+
+
+                            if (kullaniciemail != "b191210008@sakarya.edu.tr" && sifre != 123) {
+                                window.location.reload(false);
+                                return false;
+
+                            }
+
+                            if (kullaniciemail == "b191210008@sakarya.edu.tr" && sifre == 123) {
+                                return true;
+                            }
+
+                        }
+                    </script>
+
+                </form>
+
+            </div>
     </section>
+    <footer>
 
-    <!--özgeçmiş bitiş-->
+    </footer>
 
-    
+    <!--Kullanıcı Giriş kısmı başlangıç-->
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
